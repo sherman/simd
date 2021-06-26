@@ -45,4 +45,10 @@ public class NoIntersectionBenchmark {
         var result = ArrayUtils.hasIntersectionScalar(data1, data2);
         blackhole.consume(result);
     }
+
+    @Benchmark
+    public void hasNoIntersectionVectorShuffling(Blackhole blackhole) {
+        var result = ArrayUtils.hasIntersectionVectorShuffling(data1, data2);
+        blackhole.consume(result);
+    }
 }
