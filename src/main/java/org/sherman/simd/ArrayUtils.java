@@ -93,14 +93,13 @@ public class ArrayUtils {
         int j = 0;
         while (i < bound1 && j < bound2) {
             var chunk = IntVector.fromArray(SPECIES, left, i);
-            var rightVector = IntVector.fromArray(SPECIES, right, j);
 
-            if (handleChunk(chunk, rightVector)) {
+            if (handleChunk(chunk, right, j)) {
                 return true;
             }
 
             var chunkLast = chunk.lane(SPECIES.length() - 1);
-            var rightLast = rightVector.lane(SPECIES.length() - 1);
+            var rightLast = right[j + 3];
 
             if (chunkLast > rightLast) {
                 j += SPECIES.length();
@@ -117,11 +116,11 @@ public class ArrayUtils {
         return false;
     }
 
-    private static boolean handleChunk(IntVector chunk1, IntVector rightVector) {
-        var v1 = rightVector.lane(0);
-        var v2 = rightVector.lane(1);
-        var v3 = rightVector.lane(2);
-        var v4 = rightVector.lane(3);
+    private static boolean handleChunk(IntVector chunk1, int[] right, int offset) {
+        var v1 = right[offset];
+        var v2 = right[offset + 1];
+        var v3 = right[offset + 2];
+        var v4 = right[offset + 3];
 
         var r1 = chunk1.eq(v1);
         var r2 = chunk1.eq(v2);
