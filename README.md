@@ -8,7 +8,12 @@ JDK 16.0.1, OpenJDK 64-Bit Server VM, 16.0.1+9-Ubuntu-120.04
 
 # Task
 
-Find an intersection between two sorted lists.
+The task is to check, whether an intersection between two sorted arrays.
+Examples:
+
+[1, 3, 4] and [2, 3, 5] => returns true
+
+[2, 3, 4] and [1, 8, 10] => returns false
 
 # How to build/run?
 
