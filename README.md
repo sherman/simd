@@ -31,9 +31,9 @@ mvn clean install -DskipTests=true
 
 ```
 Benchmark                                                  Mode  Cnt  Score   Error   Units
-NoIntersectionBenchmark.hasNoIntersectionScalar            thrpt   10    2.019 ± 0.014  ops/us
-NoIntersectionBenchmark.hasNoIntersectionVector            thrpt   10    3.597 ± 0.031  ops/us
-NoIntersectionBenchmark.hasNoIntersectionVectorShuffling   thrpt   10    1.759 ± 0.008  ops/us    
+NoIntersectionBenchmark.hasNoIntersectionScalar           thrpt   10  2.093 ± 0.032  ops/us
+NoIntersectionBenchmark.hasNoIntersectionVector           thrpt   10  3.686 ± 0.027  ops/us
+NoIntersectionBenchmark.hasNoIntersectionVectorShuffling  thrpt   10  2.902 ± 0.023  ops/us    
 ```
 
 ## An intersection in the middle of the arrays
